@@ -1,0 +1,15 @@
+.footer{
+   width: 100vw;
+   height: 7.3vh;
+   background-color: #2E1D1E;
+   position: relative;
+   top: 30.8rem;
+}
+.p1{
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 12px;
+    position: relative;
+    left: 8rem;
+    top: 0.8rem;
+}
