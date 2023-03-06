@@ -10,7 +10,16 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { OrderComponent } from './component/order/order.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{MatIconModule} from '@angular/material/icon'
-import{MatCardModule} from '@angular/material/card'
+import{MatCardModule} from '@angular/material/card';
+import { BookComponent } from './component/book/book.component'
+import { MatButtonModule } from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
+import { PlacedOrderComponent } from './component/placed-order/placed-order.component';
+
+
 
 @NgModule({
   declarations: [
@@ -19,13 +28,16 @@ import{MatCardModule} from '@angular/material/card'
     FooterComponent,
     CartComponent,
     DashboardComponent,
-    OrderComponent
+    OrderComponent,
+    BookComponent,
+    PlacedOrderComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule,MatCardModule
+    MatIconModule,MatCardModule,MatButtonModule,MatFormFieldModule,MatGridListModule,MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

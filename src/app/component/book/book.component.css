@@ -1,0 +1,108 @@
+.container {
+    width: 80vw;
+    height: 150vh;
+
+    position: relative;
+    left: 8rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+}
+
+.book {
+    width: 21%;
+    height: 30%;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    opacity: 1;
+    border-radius: 3px;
+    border: 1px solid #E2E2E2;
+}
+.bookheader{
+     
+    position: relative;
+    left: 9.5rem;
+    top: 1.5rem;
+    width: 77vw;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+}
+.count{
+    
+    align-items: center;
+    position: relative;
+   width: 50%;
+   height: 50%;
+    top: 1rem;
+    font-weight: 700;
+    font-size: x-large;
+}
+.left{
+    position: relative;
+    width: 50%;
+    height: 50%;
+     top: 1.3rem;
+     right: 1rem;
+    text-align: right;
+     
+}
+.sort-selector{
+    
+left: 1031px;
+width: 161px;
+height: 30px;
+/* UI Properties */
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #E2E2E2;
+border-radius: 1px;
+opacity: 1;
+}
+
+.image {
+    width: 100%;
+    height: 60%;
+
+    background-color: #F5F5F5;
+
+}
+
+img {
+    position: relative;
+    align-items: center;
+    top: 1rem;
+    left: 3.5rem;
+}
+
+.text {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    top: 0.3rem;
+    left: 0.9rem;
+
+    color: #0A0102;
+
+    font-size: 15px;
+
+    font: normal normal normal 14px/19px Roboto;
+
+}
+
+.buttons {
+    width: 100%;
+    height: 20%;
+
+}
+
+.button2 {
+    position: relative;
+    top: 1rem;
+
+}

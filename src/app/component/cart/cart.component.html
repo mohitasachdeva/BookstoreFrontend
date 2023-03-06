@@ -1,1 +1,99 @@
-<p>cart works!</p>
+<div><app-header></app-header></div>
+<div class="box-1">
+    <h3>My Cart(2)</h3>
+    <div class="imgs">
+        <div>
+            <img src="../assets/images/Image 11.png">
+        </div>
+        <div class="txt">
+            Don't Make Me Think<br> <span
+                style="font-size: 11px; font-family: sans-serif;color: #878787;font: normal;">by Steve Krug</span>
+            <br><span style="font-weight:bolder; position: relative; top: 0.7rem;">Rs. 1500</span>
+        </div>
+    </div>
+    <div class="book-quantity-div">
+        <button mat-float-button class="minus" color="primary" (click)="decrease()">-</button> &nbsp;
+        <input class="quantity-number" type="text" value={{cartValue}} style=" width: 20px;" />  &nbsp;
+        <button mat-float-button class="plus" color="primary" (click)="incresase()">+</button>&nbsp;&nbsp;&nbsp;
+        <button mat-button class="remove" color="black">Remove</button>
+    </div>
+    <button mat-raised-button color="primary" style="position: relative; bottom:2.5rem ;  left: 33rem; "
+        (click)="addOrder()">PLACE ORDER</button>
+
+</div>
+
+
+    <mat-card class="customerorder-detail" *ngIf="bookFlag == true;  else elseblock" >
+     
+
+        <div class="firstrow-div1">
+            <form class="customerdetails-form">
+                <h2>Customer Details</h2>
+                <div class="firstrow-div2">
+                    <input type="text" placeholder="Name" style="height:25px;">&nbsp; &nbsp;&nbsp;
+                    <input type="text" placeholder="phoneNumber" style="height:25px;">
+                </div>
+                <br>
+                <div class="firstrow-div2">
+                    <input type="text" placeholder="Pincode" style="height:25px;">&nbsp; &nbsp;&nbsp;
+                    <input type="text" placeholder="Locality" style="height:25px;">
+                </div>
+
+                <div class="firstrowarea-div4">
+                    <mat-form-field class="form-text-area" appearance="outline">
+                        <textarea matInput placeholder="Address"></textarea>
+                    </mat-form-field>
+                </div>
+
+                <div class="firstrow-div2">
+                    <input type="text" placeholder="City" style="height:25px;">&nbsp; &nbsp;&nbsp;
+                    <input type="text" placeholder="Landmark" style="height:25px;">
+                </div>
+
+                <div class="firstrow-div3">
+                    <h2 style="font-weight: lighter; position: relative; left: -1rem;">Type</h2>
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button class="type-radio-group" value="1">Home</mat-radio-button>
+                        <mat-radio-button class="type-radio-group" value="2">Work</mat-radio-button>
+                        <mat-radio-button class="type-radio-group" value="3">Other</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="cart-order"><button mat-raised-button color="primary"
+                        style="position: relative; bottom:1.5rem ;  left: 33rem; "
+                        (click)="addDetails()">Continue</button>
+                </div>
+            </form>
+
+        </div>
+
+    </mat-card>
+    <ng-template #elseblock>
+        <div class="customer-detail">
+            <span class="customer-title">Customer Details</span> </div>
+      </ng-template>
+      <br>
+<mat-card class="ordersummary-details" *ngIf="customerStatus == true; else elsebblock">
+    <div class="summary-div">
+        <h2>Order Summary</h2>
+        <div class="imgs">
+            <div>
+                <img src="../assets/images/Image 11.png">
+            </div>
+            <div class="txt">
+                Don't Make Me Think<br> <span
+                    style="font-size: 11px; font-family: sans-serif;color: #878787;font: normal;">by Steve Krug</span>
+                <br><span style="font-weight: 900; position: relative; top: 0.7rem;">Rs. 1500</span>
+            </div>
+        </div>
+
+        <button mat-raised-button color="primary" (click)="orderplaced()" style="position: relative ;  left: 33rem; ">CheckOut</button>
+    </div>
+</mat-card>
+<br>
+<ng-template #elsebblock>
+    <div class="customer-detail">
+        <span class="customer-title">Order Summary</span> </div>
+  </ng-template>
+
+<router-outlet></router-outlet>
+<div><app-footer></app-footer></div>
